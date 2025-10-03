@@ -1,0 +1,177 @@
+/* Definições Globais e Tipografia */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background: #004d99; /* Azul Corporativo */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Amarelo de Destaque */
+}
+
+/* Seção Principal (Hero) - Destaque Visual */
+.hero {
+    background: #1e3a5f; /* Azul Escuro */
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ffd700;
+    color: #1e3a5f;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #ffc700;
+}
+
+/* Seção de Serviços */
+.secao {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.secao h3 {
+    font-size: 2em;
+    color: #004d99;
+    margin-bottom: 40px;
+}
+
+.servico-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Garante que os cards quebrem a linha em telas pequenas */
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex: 1 1 300px; /* Flexbox: Cresce, Encolhe, Tamanho base de 300px */
+}
+
+.card h4 {
+    color: #004d99;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Botão de Atendimento (Chatbot - Requisito de Atendimento) */
+.chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00bfff; /* Azul Claro para Destaque */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.chatbot-btn:hover {
+    background: #0099e6;
+}
+
+/* Mídia Query para Responsividade em Telas Pequenas */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .servico-cards {
+        flex-direction: column; /* Empilha os cards em telas pequenas */
+    }
+}
